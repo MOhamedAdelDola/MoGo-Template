@@ -1,0 +1,609 @@
+*{
+    text-transform: capitalize;
+}
+
+
+@font-face {
+    font-family: "Kaushan_Script";
+    src: url("fonts/Kaushan_Script/KaushanScript-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Montserrat-Bold";
+    src: url("fonts/Montserrat/static/Montserrat-Bold.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Montserrat-Regular";
+    src: url("fonts/Montserrat/static/Montserrat-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Roboto-Regular";
+    src: url("fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+}
+
+@mixin fontfamily($family) {
+    font-family: $family;
+}
+/* header */ 
+header{
+    .navbar-nav .nav-link.active, .navbar-nav .show>.nav-link{
+        color: #fbe389;
+        border-bottom:2px solid #fbe389;
+    }
+    position: relative;
+    &::before{
+        content: "";
+        background-image: linear-gradient(to top, #fbe389 , #f38181);
+        opacity: 0.8;
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width : 100%;
+    }
+    height: 100vh;
+    background-image: url(./images/bg-header.jpg);
+    background-size: cover;
+    background-position: center;
+    #carouselExampleIndicators{
+        height: 90%;
+        .carousel-inner{
+            height: 77vh;
+            .carousel-item{
+                height: 100%;
+                .container{
+                    height: 100%;
+                    justify-content: space-between;
+                    text-align: center;
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        bottom: 18%;
+                        height: 2px;
+                        width: 5rem;
+                        background-color: white
+                    }
+                    .row{
+                        height: 70%;
+                        padding-top: 2rem;
+                        position: relative;
+                        p{
+                            @include fontfamily("Kaushan_Script");
+                            font-size: 4rem;
+                            line-height: 1; 
+                        }
+                        h1{
+                            @include fontfamily("Montserrat-Bold");
+                            font-size: 10rem;
+                            line-height: 1; 
+                        }
+                    }
+                    button{
+                        border: 3px solid white;
+                        padding: 0.5rem 1.5rem;
+                        font-weight: bold;
+                        font-size: 1.2rem
+                    }
+                }
+            }
+        }
+        .carousel-indicators{
+            @include fontfamily("Montserrat-Regular");
+            justify-content: space-evenly;
+            margin-left: 0;
+            margin-right: 0;
+            align-items: center;
+            height: 4vh;
+            button{
+                width: 11.75rem;
+            }
+        }
+    }
+}
+/* our-story */
+.our-story{
+    h4{
+        @include fontfamily("Kaushan_Script");
+    }
+    h2{
+        position: relative;
+        @include fontfamily("Montserrat-Bold");
+        &::after{
+            content: "";
+            position: absolute;
+            width: 5.5rem;
+            height: 3px;
+            background-color: #f38181;
+            top: 86%;
+            left: 47%;
+        }
+    }
+    p{
+        @include fontfamily("Roboto-Regular");
+        opacity: 0.6;
+    }
+    .images{
+        .firstpic{
+            position: relative;
+            transition: all 1s ease-in-out ;
+            &:hover{
+                transform: translate(-10px,-11px);
+            }
+            &:hover .test{
+                visibility: visible;
+                opacity: 0.9;
+                transform: translate(-10px,-11px);
+                box-shadow: 5px 11px rgb(0, 191, 255);
+                background-color: transparent;
+            }
+            &:hover .test-text{
+                visibility: visible;
+                opacity: 1;
+                transform: translate(-10px,-11px);
+            }
+            .test{
+                background-image: linear-gradient(to top, #fbe389 , #f38181);
+                visibility: hidden;
+                opacity: 0;
+                position: absolute;
+                width: 97%;
+                height: 100%;
+                transition: all 1s ease-in-out ;
+            }
+            .test-text {
+                position: absolute;
+                visibility: hidden;
+                opacity: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                transition: all 1s ease-in-out ;
+                &::before{
+                    content: url(./images/icon-plus.png);
+                }
+                &::after{
+                    content: "super team";
+                    color: white;
+                    font-size: 20px;
+                    font-weight: bold;  
+                    @include fontfamily("Montserrat-Bold");
+                }
+            }
+        }
+    }
+}
+/* numbers */
+.Numbers{
+    margin-bottom: 5rem;
+    background-color: #95e1d3;
+    .card{
+        color: white;
+        border: 1px solid white;
+        .first-p{
+            @include fontfamily("Montserrat-Bold");
+            font-size: 65px;
+            font-weight: 700;
+            line-height: 100%;
+        }
+        .second-p{
+            @include fontfamily("Montserrat-Regular");
+            font-size: 20px;
+            font-weight: 500;
+        }
+    }
+}
+/* services */  
+.services{
+    h4{
+        @include fontfamily("Kaushan_Script");
+    }
+    h2{
+        position: relative;
+        &::after{
+            content: "";
+            position: absolute;
+            width: 5.5rem;
+            height: 3px;
+            background-color: #f38181;
+            top: 86%;
+            left: 46%;
+        }
+        @include fontfamily("Montserrat-Bold");
+    }
+    // .line{
+    //     height: 1px;
+    //     background-color: black;
+    //     margin-bottom: 4rem;
+    // }
+    .service-card{
+        .service-card-text{
+            margin-left: 2rem;
+            margin-bottom: 5rem;
+        }
+    }
+}
+/* unique-design */ 
+.unique-design{
+    position: relative;
+    background-image: url(./images/unique-design/bg-unique-design.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 108vh;
+    .container{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        &::after{
+            content: "";
+            position: absolute;
+            width: 4.5rem;
+            height: 2px;
+            background-color: #f38181;
+            top: 19%;
+            left: 47%;
+        }
+    }
+    .unique-design-text{
+        // padding-top: 5rem;
+        // margin-bottom: 2rem;
+        p{
+            @include fontfamily("Kaushan_Script");
+        }
+        h2{
+            @include fontfamily("Montserrat-Bold");
+        }
+        }
+        .unique-design-pics-within{
+            // width: 45%;
+            position: relative;
+        }
+        .unique-design-pics-float{
+            position: absolute;
+            top: 42%;
+            left: 108%;
+            width: 60%;
+    }
+}
+/* what-we-do */ 
+.what-we-do{
+    .what-we-do-heading{
+        h4{
+            @include fontfamily("Kaushan_Script");
+        }
+        h2{
+            @include fontfamily("Montserrat-Bold");
+            position: relative;
+            &::after{
+                content: "";
+                position: absolute;
+                width: 5.5rem;
+                height: 3px;
+                background-color: #f38181;
+                top: 86%;
+                left: 46%;
+            }
+        }
+        p{
+            @include fontfamily("Montserrat-Regular");
+        }
+    }
+}
+/* what-we-do-testimonial */
+.testimonial-what{
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .carousel-control-next-icon {
+        background-image: url(./images/prettyPhoto/default/sprite_next.png);
+    }
+    .carousel-control-prev-icon{
+        background-image: url(./images/prettyPhoto/default/sprite_prev.png);
+    }
+    .container{
+        .row{
+            .underline{
+                display: inline-block;
+                background-color: #f38181;
+                width: 3.3rem;
+                height: 0.188rem;
+            }
+            span{
+                @include fontfamily("Kaushan_Script");
+            }
+        }
+    }
+}
+/* Meet our team */
+.our-team{
+    h4{
+        @include fontfamily("Kaushan_Script");
+    }
+    h2{
+        position: relative;
+        @include fontfamily("Montserrat-Bold");
+        &::after{
+            content: "";
+            position: absolute;
+            width: 5.5rem;
+            height: 3px;
+            background-color: #f38181;
+            top: 86%;
+            left: 46%;
+        }
+    }
+    p{
+        @include fontfamily("Roboto-Regular");
+        opacity: 0.6;
+    }
+    .images{
+        .firstpic{
+            position: relative;
+            transition: all 1s ease-in-out ;
+            &:hover{
+                transform: translate(-10px,-11px);
+            }
+            &:hover .test{
+                visibility: visible;
+                opacity: 0.9;
+                transform: translate(-10px,-11px);
+                box-shadow: 5px 11px rgb(0, 191, 255);
+                background-color: transparent;
+            }
+            &:hover .test-text{
+                visibility: visible;
+                opacity: 1;
+                transform: translate(-14px, -14px);
+            }
+            .test{
+                background-image: linear-gradient(to top, #fbe389 , #f38181);
+                visibility: hidden;
+                opacity: 0;
+                position: absolute;
+                width: 102%;
+                height: 100%;
+                transition: all 1s ease-in-out ;
+            }
+            .test-text{
+                position: absolute;
+                visibility: hidden;
+                opacity: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                transition: all 1s ease-in-out ;
+                i{
+                    width: 13%;
+                    font-size: 1.4rem;
+                    color: #f38181;
+                    background-color: #fbe389;
+                    padding: 0.625rem 0.5rem;
+                    &:hover{
+                        color:#fbe389;
+                        background-color: #f38181;
+                    }
+                }
+            }
+        }
+    }
+}
+/* Brands */
+.brands{
+    height: 33vh;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+/* some of our work */
+.some-work{
+    h4{
+        @include fontfamily("Kaushan_Script");
+    }
+    h2{
+        position: relative;
+        @include fontfamily("Montserrat-Bold");
+        &::after{
+            content: "";
+            position: absolute;
+            width: 5.5rem;
+            height: 3px;
+            background-color: #f38181;
+            top: 86%;
+            left: 46%;
+        }
+    }
+    p{
+        @include fontfamily("Roboto-Regular");
+        opacity: 0.6;
+    }
+    .images-wrapper{
+        .image-wrapper{
+            position: relative;
+            transition: all 0.5s ease-in-out ;
+            &:hover .test{
+                visibility: visible;
+                opacity: 0.9;
+                background-color: transparent;
+            }
+            &:hover .test-text{
+                visibility: visible;
+                opacity: 1;
+            }
+            .test{
+                top: 0;
+                background-image: linear-gradient(to top, #fbe389 , #f38181);
+                visibility: hidden;
+                opacity: 0;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                transition: all 0.5s ease-in-out ;
+            }
+            .test-text {
+                top: 0;
+                position: absolute;
+                visibility: hidden;
+                opacity: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                @include fontfamily("Montserrat-Bold");
+            }
+        }
+    }
+}
+/* some work testimonial  */
+.testimonial-some{
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4rem;
+    .carousel-control-next-icon {
+        background-image: url(./images/prettyPhoto/default/sprite_next.png);
+    }
+    .carousel-control-prev-icon{
+        background-image: url(./images/prettyPhoto/default/sprite_prev.png);
+    }
+    .container{
+        .row{
+            .underline{
+                display: inline-block;
+                background-color: #f38181;
+                width: 3rem;
+                height: 0.188rem;
+            }
+            span{
+                @include fontfamily("Kaushan_Script");
+            }
+        }
+    }
+}
+/* Happy Clients */
+.happy-clients{
+    background-image: url(./images/happy-client/bg-happy-client.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    .clients-heading{
+        padding-top: 5rem;
+        h4{
+            @include fontfamily("Kaushan_Script");
+        }
+        h2{
+            position: relative;
+            @include fontfamily("Montserrat-Bold");
+            &::after{
+                content: "";
+                position: absolute;
+                width: 5.5rem;
+                height: 3px;
+                background-color: #f38181;
+                top: 86%;
+                left: 46%;
+            }
+        }
+    }
+    .clients-card{
+        .underline{
+            background-color: #f38181;
+            width: 5.5rem;
+            height: 0.2rem;
+        }
+    }    
+}
+/* Blogs */
+.blogs{
+    margin-bottom: 5rem;
+    h4{
+        @include fontfamily("Kaushan_Script");
+    }
+    h2{
+        position: relative;
+        &::after{
+            content: "";
+            position: absolute;
+            width: 5.5rem;
+            height: 3px;
+            background-color: #f38181;
+            top: 86%;
+            left: 46%;
+        }
+        @include fontfamily("Montserrat-Bold");
+    }
+    .blog-card-wrapper{
+        i{
+            color: #7ddae6fa;
+        }
+        .card{
+            position: relative;
+            .card-date{
+                position: absolute;
+                bottom: 52%;
+                right: 85%;
+                width: 20%;
+                height: 20%;
+                background-color: #7ddae6fa;
+                p{ 
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .month{
+                    font-style: italic;
+                }
+            }
+        }
+    }
+}
+/* Map */
+.map{
+    margin-bottom: 5rem;
+    background-image: url(./images/map/bg-map.jpg);
+    background-repeat: no-repeat;
+    height: 25vh;
+    color: #f38181;
+    i{
+        font-size: 2rem;
+        padding-bottom: 0.5rem;
+    }
+    p{
+        @include fontfamily("Montserrat-Bold")
+    }
+    .underline{
+        background-color: #f38181;
+        width: 5.5rem;
+        height: 0.2rem;
+    }
+}
+/* Footer */
+footer{
+    h3{
+        @include fontfamily("Montserrat-Bold")
+    }
+    i{
+        color: #7ddae6fa;
+    }
+    span{
+        color: #f38181;
+    }
+    .input-group{
+        .input-group-text{
+            background-color: #7ddae6fa;
+        }
+    }
+    .img-wrapper{
+        img{
+            width: 31%;
+        }
+    }
+}

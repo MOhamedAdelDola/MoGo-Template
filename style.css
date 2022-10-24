@@ -1,0 +1,743 @@
+* {
+  text-transform: capitalize;
+}
+
+@font-face {
+  font-family: "Kaushan_Script";
+  src: url("fonts/Kaushan_Script/KaushanScript-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat-Bold";
+  src: url("fonts/Montserrat/static/Montserrat-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat-Regular";
+  src: url("fonts/Montserrat/static/Montserrat-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+}
+
+/* header */
+header {
+  position: relative;
+  height: 100vh;
+  background-image: url(./images/bg-header.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+header .navbar-nav .nav-link.active, header .navbar-nav .show > .nav-link {
+  color: #fbe389;
+  border-bottom: 2px solid #fbe389;
+}
+
+header::before {
+  content: "";
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#fbe389), to(#f38181));
+  background-image: linear-gradient(to top, #fbe389, #f38181);
+  opacity: 0.8;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+
+header #carouselExampleIndicators {
+  height: 90%;
+}
+
+header #carouselExampleIndicators .carousel-inner {
+  height: 77vh;
+}
+
+header #carouselExampleIndicators .carousel-inner .carousel-item {
+  height: 100%;
+}
+
+header #carouselExampleIndicators .carousel-inner .carousel-item .container {
+  height: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center;
+}
+
+header #carouselExampleIndicators .carousel-inner .carousel-item .container::after {
+  content: "";
+  position: absolute;
+  bottom: 18%;
+  height: 2px;
+  width: 5rem;
+  background-color: white;
+}
+
+header #carouselExampleIndicators .carousel-inner .carousel-item .container .row {
+  height: 70%;
+  padding-top: 2rem;
+  position: relative;
+}
+
+header #carouselExampleIndicators .carousel-inner .carousel-item .container .row p {
+  font-family: "Kaushan_Script";
+  font-size: 4rem;
+  line-height: 1;
+}
+
+header #carouselExampleIndicators .carousel-inner .carousel-item .container .row h1 {
+  font-family: "Montserrat-Bold";
+  font-size: 10rem;
+  line-height: 1;
+}
+
+header #carouselExampleIndicators .carousel-inner .carousel-item .container button {
+  border: 3px solid white;
+  padding: 0.5rem 1.5rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+header #carouselExampleIndicators .carousel-indicators {
+  font-family: "Montserrat-Regular";
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-left: 0;
+  margin-right: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 4vh;
+}
+
+header #carouselExampleIndicators .carousel-indicators button {
+  width: 11.75rem;
+}
+
+/* our-story */
+.our-story h4 {
+  font-family: "Kaushan_Script";
+}
+
+.our-story h2 {
+  position: relative;
+  font-family: "Montserrat-Bold";
+}
+
+.our-story h2::after {
+  content: "";
+  position: absolute;
+  width: 5.5rem;
+  height: 3px;
+  background-color: #f38181;
+  top: 86%;
+  left: 47%;
+}
+
+.our-story p {
+  font-family: "Roboto-Regular";
+  opacity: 0.6;
+}
+
+.our-story .images .firstpic {
+  position: relative;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.our-story .images .firstpic:hover {
+  -webkit-transform: translate(-10px, -11px);
+          transform: translate(-10px, -11px);
+}
+
+.our-story .images .firstpic:hover .test {
+  visibility: visible;
+  opacity: 0.9;
+  -webkit-transform: translate(-10px, -11px);
+          transform: translate(-10px, -11px);
+  -webkit-box-shadow: 5px 11px deepskyblue;
+          box-shadow: 5px 11px deepskyblue;
+  background-color: transparent;
+}
+
+.our-story .images .firstpic:hover .test-text {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: translate(-10px, -11px);
+          transform: translate(-10px, -11px);
+}
+
+.our-story .images .firstpic .test {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#fbe389), to(#f38181));
+  background-image: linear-gradient(to top, #fbe389, #f38181);
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  width: 97%;
+  height: 100%;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.our-story .images .firstpic .test-text {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.our-story .images .firstpic .test-text::before {
+  content: url(./images/icon-plus.png);
+}
+
+.our-story .images .firstpic .test-text::after {
+  content: "super team";
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Montserrat-Bold";
+}
+
+/* numbers */
+.Numbers {
+  margin-bottom: 5rem;
+  background-color: #95e1d3;
+}
+
+.Numbers .card {
+  color: white;
+  border: 1px solid white;
+}
+
+.Numbers .card .first-p {
+  font-family: "Montserrat-Bold";
+  font-size: 65px;
+  font-weight: 700;
+  line-height: 100%;
+}
+
+.Numbers .card .second-p {
+  font-family: "Montserrat-Regular";
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* services */
+.services h4 {
+  font-family: "Kaushan_Script";
+}
+
+.services h2 {
+  position: relative;
+  font-family: "Montserrat-Bold";
+}
+
+.services h2::after {
+  content: "";
+  position: absolute;
+  width: 5.5rem;
+  height: 3px;
+  background-color: #f38181;
+  top: 86%;
+  left: 46%;
+}
+
+.services .service-card .service-card-text {
+  margin-left: 2rem;
+  margin-bottom: 5rem;
+}
+
+/* unique-design */
+.unique-design {
+  position: relative;
+  background-image: url(./images/unique-design/bg-unique-design.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 108vh;
+}
+
+.unique-design .container {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+
+.unique-design .container::after {
+  content: "";
+  position: absolute;
+  width: 4.5rem;
+  height: 2px;
+  background-color: #f38181;
+  top: 19%;
+  left: 47%;
+}
+
+.unique-design .unique-design-text p {
+  font-family: "Kaushan_Script";
+}
+
+.unique-design .unique-design-text h2 {
+  font-family: "Montserrat-Bold";
+}
+
+.unique-design .unique-design-pics-within {
+  position: relative;
+}
+
+.unique-design .unique-design-pics-float {
+  position: absolute;
+  top: 42%;
+  left: 108%;
+  width: 60%;
+}
+
+/* what-we-do */
+.what-we-do .what-we-do-heading h4 {
+  font-family: "Kaushan_Script";
+}
+
+.what-we-do .what-we-do-heading h2 {
+  font-family: "Montserrat-Bold";
+  position: relative;
+}
+
+.what-we-do .what-we-do-heading h2::after {
+  content: "";
+  position: absolute;
+  width: 5.5rem;
+  height: 3px;
+  background-color: #f38181;
+  top: 86%;
+  left: 46%;
+}
+
+.what-we-do .what-we-do-heading p {
+  font-family: "Montserrat-Regular";
+}
+
+/* what-we-do-testimonial */
+.testimonial-what {
+  height: 30vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.testimonial-what .carousel-control-next-icon {
+  background-image: url(./images/prettyPhoto/default/sprite_next.png);
+}
+
+.testimonial-what .carousel-control-prev-icon {
+  background-image: url(./images/prettyPhoto/default/sprite_prev.png);
+}
+
+.testimonial-what .container .row .underline {
+  display: inline-block;
+  background-color: #f38181;
+  width: 3.3rem;
+  height: 0.188rem;
+}
+
+.testimonial-what .container .row span {
+  font-family: "Kaushan_Script";
+}
+
+/* Meet our team */
+.our-team h4 {
+  font-family: "Kaushan_Script";
+}
+
+.our-team h2 {
+  position: relative;
+  font-family: "Montserrat-Bold";
+}
+
+.our-team h2::after {
+  content: "";
+  position: absolute;
+  width: 5.5rem;
+  height: 3px;
+  background-color: #f38181;
+  top: 86%;
+  left: 46%;
+}
+
+.our-team p {
+  font-family: "Roboto-Regular";
+  opacity: 0.6;
+}
+
+.our-team .images .firstpic {
+  position: relative;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.our-team .images .firstpic:hover {
+  -webkit-transform: translate(-10px, -11px);
+          transform: translate(-10px, -11px);
+}
+
+.our-team .images .firstpic:hover .test {
+  visibility: visible;
+  opacity: 0.9;
+  -webkit-transform: translate(-10px, -11px);
+          transform: translate(-10px, -11px);
+  -webkit-box-shadow: 5px 11px deepskyblue;
+          box-shadow: 5px 11px deepskyblue;
+  background-color: transparent;
+}
+
+.our-team .images .firstpic:hover .test-text {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: translate(-14px, -14px);
+          transform: translate(-14px, -14px);
+}
+
+.our-team .images .firstpic .test {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#fbe389), to(#f38181));
+  background-image: linear-gradient(to top, #fbe389, #f38181);
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  width: 102%;
+  height: 100%;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.our-team .images .firstpic .test-text {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.our-team .images .firstpic .test-text i {
+  width: 13%;
+  font-size: 1.4rem;
+  color: #f38181;
+  background-color: #fbe389;
+  padding: 0.625rem 0.5rem;
+}
+
+.our-team .images .firstpic .test-text i:hover {
+  color: #fbe389;
+  background-color: #f38181;
+}
+
+/* Brands */
+.brands {
+  height: 33vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 5rem;
+}
+
+/* some of our work */
+.some-work h4 {
+  font-family: "Kaushan_Script";
+}
+
+.some-work h2 {
+  position: relative;
+  font-family: "Montserrat-Bold";
+}
+
+.some-work h2::after {
+  content: "";
+  position: absolute;
+  width: 5.5rem;
+  height: 3px;
+  background-color: #f38181;
+  top: 86%;
+  left: 46%;
+}
+
+.some-work p {
+  font-family: "Roboto-Regular";
+  opacity: 0.6;
+}
+
+.some-work .images-wrapper .image-wrapper {
+  position: relative;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.some-work .images-wrapper .image-wrapper:hover .test {
+  visibility: visible;
+  opacity: 0.9;
+  background-color: transparent;
+}
+
+.some-work .images-wrapper .image-wrapper:hover .test-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.some-work .images-wrapper .image-wrapper .test {
+  top: 0;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#fbe389), to(#f38181));
+  background-image: linear-gradient(to top, #fbe389, #f38181);
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.some-work .images-wrapper .image-wrapper .test-text {
+  top: 0;
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  font-family: "Montserrat-Bold";
+}
+
+/* some work testimonial  */
+.testimonial-some {
+  height: 20vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 4rem;
+}
+
+.testimonial-some .carousel-control-next-icon {
+  background-image: url(./images/prettyPhoto/default/sprite_next.png);
+}
+
+.testimonial-some .carousel-control-prev-icon {
+  background-image: url(./images/prettyPhoto/default/sprite_prev.png);
+}
+
+.testimonial-some .container .row .underline {
+  display: inline-block;
+  background-color: #f38181;
+  width: 3rem;
+  height: 0.188rem;
+}
+
+.testimonial-some .container .row span {
+  font-family: "Kaushan_Script";
+}
+
+/* Happy Clients */
+.happy-clients {
+  background-image: url(./images/happy-client/bg-happy-client.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.happy-clients .clients-heading {
+  padding-top: 5rem;
+}
+
+.happy-clients .clients-heading h4 {
+  font-family: "Kaushan_Script";
+}
+
+.happy-clients .clients-heading h2 {
+  position: relative;
+  font-family: "Montserrat-Bold";
+}
+
+.happy-clients .clients-heading h2::after {
+  content: "";
+  position: absolute;
+  width: 5.5rem;
+  height: 3px;
+  background-color: #f38181;
+  top: 86%;
+  left: 46%;
+}
+
+.happy-clients .clients-card .underline {
+  background-color: #f38181;
+  width: 5.5rem;
+  height: 0.2rem;
+}
+
+/* Blogs */
+.blogs {
+  margin-bottom: 5rem;
+}
+
+.blogs h4 {
+  font-family: "Kaushan_Script";
+}
+
+.blogs h2 {
+  position: relative;
+  font-family: "Montserrat-Bold";
+}
+
+.blogs h2::after {
+  content: "";
+  position: absolute;
+  width: 5.5rem;
+  height: 3px;
+  background-color: #f38181;
+  top: 86%;
+  left: 46%;
+}
+
+.blogs .blog-card-wrapper i {
+  color: #7ddae6fa;
+}
+
+.blogs .blog-card-wrapper .card {
+  position: relative;
+}
+
+.blogs .blog-card-wrapper .card .card-date {
+  position: absolute;
+  bottom: 52%;
+  right: 85%;
+  width: 20%;
+  height: 20%;
+  background-color: #7ddae6fa;
+}
+
+.blogs .blog-card-wrapper .card .card-date p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.blogs .blog-card-wrapper .card .card-date .month {
+  font-style: italic;
+}
+
+/* Map */
+.map {
+  margin-bottom: 5rem;
+  background-image: url(./images/map/bg-map.jpg);
+  background-repeat: no-repeat;
+  height: 25vh;
+  color: #f38181;
+}
+
+.map i {
+  font-size: 2rem;
+  padding-bottom: 0.5rem;
+}
+
+.map p {
+  font-family: "Montserrat-Bold";
+}
+
+.map .underline {
+  background-color: #f38181;
+  width: 5.5rem;
+  height: 0.2rem;
+}
+
+/* Footer */
+footer h3 {
+  font-family: "Montserrat-Bold";
+}
+
+footer i {
+  color: #7ddae6fa;
+}
+
+footer span {
+  color: #f38181;
+}
+
+footer .input-group .input-group-text {
+  background-color: #7ddae6fa;
+}
+
+footer .img-wrapper img {
+  width: 31%;
+}
+/*# sourceMappingURL=style.css.map */
